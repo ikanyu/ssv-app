@@ -10,10 +10,26 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require normalize-rails
  */
 
+@import "application/variables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-@import "application/**/*";
 @import "font-awesome";
+@import "application/**/*";
+
+.navbar {
+  position: relative;
+  min-height: 64px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+}
+
+.navbar-brand {
+  float: left;
+  padding: 20.5px 15px;
+  font-size: 17px;
+  line-height: 23px;
+  height: 64px;
+}

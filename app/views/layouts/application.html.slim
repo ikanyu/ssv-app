@@ -1,10 +1,44 @@
 doctype html
 html
   head
-    title Pan
+    title SSV
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
   body class="#{controller.controller_path.parameterize} #{controller.action_name}"
-  	.container
-  		= yield
+		nav.navbar.navbar-default
+		  .container
+		    .navbar-header
+		      button.navbar-toggle data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" 
+		        span.icon-bar
+		        span.icon-bar
+		        span.icon-bar
+		      a.navbar-brand href="#"  Sunway Student Volunteers
+		    .navbar-collapse.collapse.navbar-inverse-collapse
+		      ul.nav.navbar-nav
+		        li.active
+		          a href="#"  Home
+		        li
+		          a href="#"  Upcoming Activities
+		        li
+		          a href="#"  Blog
+		        li
+		          a href="#"  About SSV
+		        li
+		          a href="#"  Contact Us
+		      ul.nav.navbar-nav.navbar-right
+		        li.dropdown
+		          a.dropdown-toggle data-toggle="dropdown" href="#" 
+		            | Join SSV
+		            b.caret
+		          ul.dropdown-menu
+		            li
+		              a href="#"  First time here?
+		            li
+		              a href="#"  Login
+		            li.divider
+		            li
+		              a href="#"  Help
+
+
+		= yield

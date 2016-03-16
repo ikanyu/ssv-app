@@ -5,6 +5,8 @@ gem 'rails', '4.2.5.2'
 gem 'pg'
 gem 'unicorn-rails'
 
+gem 'normalize-rails'
+
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -13,6 +15,8 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'dotenv-rails', :require => 'dotenv/rails-now'
+
+gem 'sorcery'
 
 group :development, :test do
   gem 'byebug'
