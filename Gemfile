@@ -21,6 +21,8 @@ gem 'sorcery'
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :production, :staging do
@@ -36,3 +38,8 @@ group :development do
   gem 'spring'
 end
 
+
+group :test do
+	gem 'database_cleaner'
+  gem 'shoulda-matchers'
+end
