@@ -1,0 +1,19 @@
+h1 All Users
+
+.table-responsive
+	table.table
+		tr
+			th Email
+			th Name
+			th Student ID
+			th Identity Number
+			th Contact Number
+			th Course
+		- @users.each do |user|
+			tr
+				td = user.email
+				td = user.name
+				td = user.student_id
+				td = user.identity_number
+				td = user.contact_number
+				td = link_to 'Edit', edit_admin_user_path(user)

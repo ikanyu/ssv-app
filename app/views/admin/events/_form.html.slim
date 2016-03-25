@@ -1,0 +1,17 @@
+= f.input :title
+= f.input :introduction
+= f.input :date,  as: :date
+= f.input :time, as: :time
+= f.input :venue
+= f.input :volunteering_hour
+= f.input :gathering_time, as: :time
+= f.input :gathering_venue
+= f.label 'Transportation'
+= f.input :transportation, as: :boolean, label: 'Yes'
+= f.label 'Meal'
+= f.input :meal, as: :boolean, label: 'Yes'
+= f.label 'Certificate'
+= f.input :certificate, as: :boolean, label: 'Yes'
+= f.input :job_scope
+= f.input :notes
+= f.submit

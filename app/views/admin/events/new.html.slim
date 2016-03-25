@@ -1,0 +1,6 @@
+.container-fluid
+	.row
+		.col-md-offset-4.col-md-4
+			h1 Create Event
+			= simple_form_for @event, url: admin_events_path, method: :post do |f|
+				= render 'admin/events/form', f: f 

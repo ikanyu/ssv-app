@@ -8,4 +8,9 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true, presence: true
   validates :name, presence: true
   validates :student_id, presence: true
+
+  has_many :memberships
+  has_many :events, foreign_key: 'admin_id'
+
+  enum status: %w(active blacklisted expired)
 end

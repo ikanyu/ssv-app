@@ -18,7 +18,8 @@
 
 
 .env
-.byebug-history
+.byebug_history
 /config/database.yml
 .DS_Store
 /config/secrets.yml
+/app/assets/files

@@ -1,4 +1,6 @@
-class UsersController < ApplicationController
+class Admin::UsersController < ApplicationController
+
+	before_action :require_login, only: [:new, :create]
 
 	def new
 		@user = User.new
@@ -7,11 +9,19 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			auto_login(@user)
-			redirect_to root_path
+			redirect_to admin_dashboard_path
+			flash[:success] = 'New student is registered'
 		else
 			render :new
 		end
+	end
+
+	def index
+		@users = User.all
+	end
+
+	def dashboard
+		
 	end
 
 	private

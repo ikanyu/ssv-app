@@ -1,0 +1,33 @@
+h1 Event Details
+
+= link_to 'Edit Events', edit_admin_event_path
+
+h3 Title
+= @event.title
+
+h3 Introduction
+= @event.introduction
+
+h3 Date
+= @event.date
+
+h3 Time
+= @event.time.strftime('%H:%M')
+
+h3 Venue
+= @event.venue
+
+h3 Volunteering Hor
+= @event.volunteering_hour
+
+h3 Gathering Time
+= @event.gathering_time.strftime('%H:%M')
+
+h3 Gathering Venue
+= @event.gathering_venue
+
+h3 Transportation
+- if @event.transportation == true
+		= 'Transportation provided' 
+- else
+		= 'No transportation provided'

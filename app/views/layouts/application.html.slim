@@ -35,15 +35,16 @@ html
 		            | Join SSV
 		            b.caret
 		          ul.dropdown-menu
-		            li
-		              = link_to 'First time here?', '#'
-		            li
-		              = link_to 'Admin Login', login_path
-		            li
-		            	= link_to 'Logout', logout_path
+		          	- if logged_in?
+		          		li = link_to 'Logout', logout_path
+		            - else
+		            	li = link_to 'First time here?', '#'
+		            	li = link_to 'Admin Login', login_path
+		          	end
+		            
 		            li.divider
-		            li
-		              = link_to 'Help', '#'
-		#messages
-			= render 'layouts/flash_messages'
-		= yield
+		            li = link_to 'Help', '#'
+		.container
+			#messages
+				= render 'layouts/flash_messages'
+			= yield

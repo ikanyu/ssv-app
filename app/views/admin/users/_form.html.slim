@@ -1,0 +1,18 @@
+.form-group
+ 	= f.label 'Full Name'
+ 	= f.text_field :name, class: 'form-control'
+.form-group
+	= f.label 'Student ID'
+	= f.text_field :student_id, class: 'form-control'
+.form-group
+	= f.label 'Email'
+	= f.email_field :email, class: 'form-control'
+.form-group
+  = f.label 'Password'
+  = f.password_field :password, class: 'form-control'
+.form-group
+  = f.label 'Password Confirmation'
+  = f.password_field :password_confirmation, class: 'form-control'
+
+.form-group
+	= f.submit
