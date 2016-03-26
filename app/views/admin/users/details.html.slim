@@ -1,0 +1,16 @@
+h1 Admin Details
+
+.row
+	.col-md-offset-4.col-md-4
+		= simple_form_for @user, url: admin_details_path(@user), method: :put do |f|
+			= f.input :email
+			= f.input :name
+			= f.input :student_id
+			= f.input :designation
+			= f.input :identity_number
+			= f.input :contact_number
+			= f.input :course
+			= f.input :course_intake
+			= f.input :emergency_contact
+			= f.input :emergency_number
+			= f.submit 'Update Admin Details'

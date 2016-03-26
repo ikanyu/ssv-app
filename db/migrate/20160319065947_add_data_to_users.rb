@@ -4,5 +4,6 @@ class AddDataToUsers < ActiveRecord::Migration
   	add_column :users, :student_id, :integer
   	add_column :users, :admin, :boolean, default: false
   	add_column :users, :designation, :string
+  	add_column :users, :paid, :boolean
   end
 end

@@ -1,0 +1,6 @@
+/ .container-fluid
+.row
+	.col-md-offset-4.col-md-4
+		h1 = "Edit Member #{@user.name}"
+		= simple_form_for @user, url: admin_user_path(@user), method: :put do |f|
+			= render 'admin/users/form', f: f

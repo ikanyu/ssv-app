@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20160324172009) do
     t.text     "job_scope"
     t.text     "notes"
     t.integer  "admin_id"
+    t.integer  "volunteers_needed"
+    t.integer  "max_volunteers"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,13 +45,14 @@ ActiveRecord::Schema.define(version: 20160324172009) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string  "email",                             null: false
+    t.string  "email",                                 null: false
     t.string  "crypted_password"
     t.string  "salt"
     t.string  "name"
     t.integer "student_id"
-    t.boolean "admin",             default: false
+    t.boolean "admin",                 default: false
     t.string  "designation"
+    t.boolean "paid"
     t.string  "identity_number"
     t.string  "contact_number"
     t.string  "course"
@@ -57,7 +60,8 @@ ActiveRecord::Schema.define(version: 20160324172009) do
     t.string  "emergency_contact"
     t.string  "emergency_number"
     t.date    "expiry"
-    t.integer "status",            default: 1
+    t.integer "status",                default: 1
+    t.integer "admin_registration_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

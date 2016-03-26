@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # resources :users, only: [:new, :create]
   namespace :admin do
     get 'dashboard' => 'users#dashboard'
+    get 'details' => 'users#details'
+    put 'details' => 'users#update_details'
     resources :users
     resources :events
   end

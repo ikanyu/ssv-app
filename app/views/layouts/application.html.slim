@@ -36,6 +36,8 @@ html
 		            b.caret
 		          ul.dropdown-menu
 		          	- if logged_in?
+		          		li = link_to 'Edit My Details', admin_details_path
+		          		li = link_to 'Dashboard', admin_dashboard_path
 		          		li = link_to 'Logout', logout_path
 		            - else
 		            	li = link_to 'First time here?', '#'

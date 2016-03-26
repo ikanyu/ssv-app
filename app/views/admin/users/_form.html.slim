@@ -1,18 +1,13 @@
-.form-group
- 	= f.label 'Full Name'
- 	= f.text_field :name, class: 'form-control'
-.form-group
-	= f.label 'Student ID'
-	= f.text_field :student_id, class: 'form-control'
-.form-group
-	= f.label 'Email'
-	= f.email_field :email, class: 'form-control'
-.form-group
-  = f.label 'Password'
-  = f.password_field :password, class: 'form-control'
-.form-group
-  = f.label 'Password Confirmation'
-  = f.password_field :password_confirmation, class: 'form-control'
+= f.input :name
+= f.input :student_id
+= f.input :email
+= f.label 'Paid'
+= f.input :paid, as: :boolean, label: 'Yes'
+= f.input :identity_number
+= f.input :contact_number
+= f.input :course
+= f.input :course_intake
+= f.input :emergency_contact
+= f.input :emergency_number
 
-.form-group
-	= f.submit
+= f.submit

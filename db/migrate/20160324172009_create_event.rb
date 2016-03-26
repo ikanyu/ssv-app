@@ -15,6 +15,8 @@ class CreateEvent < ActiveRecord::Migration
     	t.text :job_scope
     	t.text :notes
         t.integer :admin_id
+        t.integer :volunteers_needed
+        t.integer :max_volunteers
 
     	t.timestamps
     end
