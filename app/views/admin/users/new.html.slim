@@ -1,8 +1,8 @@
 / .container-fluid
 .row
-	.col-md-offset-4.col-md-4
-		h1 Create New Member
-		= simple_form_for @user, url: admin_users_path(@user), method: :post do |f|
-			= f.input :password, as: :hidden, input_html: { value: '123123123' }
-			= f.input :password_confirmation, as: :hidden, input_html: { value: '123123123' }
-			= render 'admin/users/form', f: f
+  .col-md-offset-4.col-md-4
+    h1 Create New Member
+    = simple_form_for @user, url: admin_users_path(@user), method: :post do |f|
+      = f.input :password, as: :hidden, input_html: { value: '123123123' }
+      = f.input :password_confirmation, as: :hidden, input_html: { value: '123123123' }
+      = render 'admin/users/form', f: f

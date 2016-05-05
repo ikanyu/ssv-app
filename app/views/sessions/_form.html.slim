@@ -1,11 +1,11 @@
 = form_for(:session, url: {controller: 'sessions', action: 'create', method: 'post' }) do |f|
-	.field
-	  = f.label :email
-	  br
-	  = f.text_field :email
-	.field
-	  = f.label :password
-	  br
-	  = f.password_field :password
-	.actions
-	  = f.submit 'Login'
+  .field
+    = f.label :email
+    br
+    = f.text_field :email
+  .field
+    = f.label :password
+    br
+    = f.password_field :password
+  .actions
+    = f.submit 'Login'

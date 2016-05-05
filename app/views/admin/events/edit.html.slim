@@ -1,6 +1,6 @@
 .container-fluid
-	.row
-		.col-md-offset-4.col-md-4
-			h1 Edit Event
-			= simple_form_for @event, url: admin_event_path(@event), method: :put do |f|
-				= render 'admin/events/form', f: f 
+  .row
+    .col-md-offset-4.col-md-4
+      h1 Edit Event
+      = simple_form_for @event, url: admin_event_path(@event), method: :put do |f|
+        = render 'admin/events/form', f: f 

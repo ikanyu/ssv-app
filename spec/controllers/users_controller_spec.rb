@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
 
-	let(:user) { create(:user, password: '123123123', password_confirmation: '123123123') }
+  let(:user) { create(:user, password: '123123123', password_confirmation: '123123123') }
   
   describe 'GET #new' do
     before { get :new }
